@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/hotel.css">
+    <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+    <title>Hotel</title>
+    <style>
+        #conatin{
+            width: 80%;
+            margin: auto;
+        }
+       
+        
+        #edit{
+            background-color: rgb(103, 165, 223);
+            border: none;
+            border-radius: 5px;
+            padding:2%;
+            font-weight: bold;
+            color: white;
+            padding-left: 2%;
+            padding-right: 3%;
+            margin-right: 3%;
+        }
+        #del{
+            background-color: rgb(219, 45, 103);
+            border: none;
+            border-radius: 5px;
+            padding: 2%;
+            font-weight: bold;
+            color: white;
+        }
+        #create{
+            /* background-color: rgb(85, 218, 92); */
+            border: none;
+            margin-right: 2%;
+            border-radius: 5px;
+            padding: 1%;
+            font-weight: bold;
+            color: white;
+       
+        
+        }
+        #admin_create{
+            background-color: #06202e;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3%;
+        }
+       #conatin #card2{
+        margin-top: 0px;
+            height: 200px;
+           /* gap: 5%; */
+        }
+        #conatin #pricediv{
+            padding-top: 5%;
+            width: 50%;
+        }
+      
+    </style>
+</head>
+<body>
+    <div id="admin_create">
+        <p id="compass" style="font-size: 30px; font-weight: 800;font-family: Alex Brush; color: white;margin-left: 2%;">Compass    Group</p>
+        <h3 id="create">Create New +</h3>
+    </div>
+    
+    <div id="conatin">
+
+    </div>
+  
+</body>
+</html>
+<script src="./scripts/adminhotel.js"></script>
+<script>
+    let create=document.getElementById("create")
+    create.addEventListener("click",()=>{
+        window.location.href='./createnew.html'
+    })
+</script>

@@ -1,0 +1,104 @@
+<html>
+    <style>
+        *{
+         box-sizing: border-box;   
+        }
+        body{
+            margin: 0;
+padding: 0;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: red;
+            color:aliceblue;
+        }
+        .name{
+            font-size: 1.5rem;
+            margin: .5rem;
+        }
+        .links ul{
+margin: 0;
+padding: 0;
+display: flex;
+/* justify-content: space-evenly; */
+        }
+        .links li{
+            list-style: none;
+        }
+        .links li a{
+            text-decoration: none;
+            color: white;
+            padding: 1rem;
+            display: block;
+        }
+        .links li:hover{
+            background-color: rgb(30, 96, 155);
+        }
+        .toggle-button{
+            position: absolute;
+            top: .75rem;
+            right: 1rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+        .toggle-button .bar{
+            height:3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+        }
+        @media(max-width:400px){
+            .toggle-button{
+                display: flex;
+            }
+            .links{
+                display: none;
+                width:100%;
+
+            }
+            .navbar{
+                flex-direction: column;
+                align-items: flex-start;
+
+            }
+            .links ul{
+                flex-direction: column;
+                width: 100%;
+            }
+            .links li{
+                text-align: center;
+
+            }
+            links li a{
+                padding: .5rem 1rem;
+            }
+            links.active{
+                display: flex;
+            }
+        }
+    </style>
+    <nav class="navbar">
+<div class="name">Compass Group</div>
+<a href="#" class="toggle-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</a>
+<div class="links">
+<ul>
+   <li><a href="">home</a></li>
+   <li><a href="">home</a></li>
+   <li><a href="">home</a></li>
+</ul>
+</div>
+    </nav>
+</html>
+<script>
+    const toggle=document.getElementsByClassName('toggle-button')[0]
+    // conat links=docu
+</script>

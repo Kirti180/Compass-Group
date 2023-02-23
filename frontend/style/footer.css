@@ -1,0 +1,10 @@
+#footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+ /* #line1{
+    margin-left: 4%; 
+    margin-right:4% ;
+  } */

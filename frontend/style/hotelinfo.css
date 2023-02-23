@@ -1,0 +1,145 @@
+body{
+    background-color: rgb(243, 240, 240);
+   
+}
+#main_info{
+    /* margin-top:; */
+    
+ 
+    display: flex;
+    gap: 40%;
+}
+
+    
+
+#room_btn{
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 90%;
+  left: 15%;
+    /* margin-bottom: 5%; */
+}
+#uppermain{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    /* padding-bottom: 2%; */
+}
+.activity{
+    display: flex;
+    gap: 10%;
+    width: 100%;
+    padding-top: 10%;
+}
+#act_main{
+    display: flex;
+   
+    gap: 80%;
+}
+#act_main img{
+    /* padding-top: 5%; */
+    width: 20px;
+    height: 20px;
+}
+.drive{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 8%;
+  
+    /* width: 90%; */
+}
+.drive img{
+    /* padding-top: 3%; */
+    width: 18px;
+    height: 22px;
+}
+.drive_p{
+    /* border: 1px solid red; */
+    text-align: left;
+  
+    
+}
+#headding{
+    display: flex;
+    gap: 50%;
+    /* margin: auto; */
+    /* justify-content: space-between; */
+}
+#btn_rev{
+font-size: 24px;
+margin-top: 50%;
+padding: 5%;
+background-color: #c83259;
+border: navajowhite;
+color: white;
+border-radius: 5px;
+}
+#image{
+margin-top: 8%;
+
+}
+.pay{
+height: 15%;
+width: 90%;
+color: white;
+font-size: 20px;
+padding-top: 1%;
+padding-bottom: 1%;
+background-color: #c83259;
+border: #c83259;
+border-radius: 5px;
+}
+#main_modal{
+display: flex;
+gap: 5%;
+padding: 10%;
+/* */
+}
+.inner_main{
+border: 1px solid black;
+height: 225px;
+padding: 1%;
+}
+#main_modal{
+width: 1000px;
+}
+#price{
+margin-top: 7%;
+}
+
+@media screen and (min-width: 300px) and (max-width:650px){
+    #main_info{
+        display: flex;
+        flex-direction: column;
+    }
+    #act_main{
+        gap:20%
+    }
+    #room_btn{
+        /* border: 1px solid black; */
+        position: absolute;
+        top: 50%;
+      left: 15%;
+        /* margin-bottom: 5%; */
+    }
+}
+/* medium */
+@media screen and (min-width: 651px) and (max-width:950px){
+#main_info{
+    display: flex;
+    flex-direction: column;
+}
+#act_main{
+    gap:40%
+}
+#room_btn{
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 45%;
+  left: 15%;
+    /* margin-bottom: 5%; */
+}
+}
