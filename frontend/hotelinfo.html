@@ -4,113 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="./style/hotelinfo.css">
+<link rel="stylesheet" href="./style/navbar.css">
     <title>Document</title>
     <style>
-        body{
-            background-color: rgb(243, 240, 240);
-            width: 80%;
-            margin: auto;
-        }
-        #main_info{
-          padding-left: 5%;
-          padding-right: 5%;
-          padding-bottom: 2%;
-            display: flex;
-            gap: 40%;
-            background-color: white;
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            
-        }
-        .activity{
-            display: flex;
-            gap: 10%;
-            width: 100%;
-            padding-top: 10%;
-        }
-        #act_main{
-            display: flex;
-           
-            gap: 80%;
-        }
-        #act_main img{
-            /* padding-top: 5%; */
-            width: 20px;
-            height: 20px;
-        }
-        .drive{
-            border: 1px solid red;
-            display: flex;
-            gap: 8%;
-          
-            /* width: 90%; */
-        }
-        .drive img{
-            /* padding-top: 3%; */
-            width: 18px;
-            height: 22px;
-        }
-        .drive_p{
-            border: 1px solid red;
-            text-align: left;
-            
-        }
-        #headding{
-            display: flex;
-            gap: 50%;
-            /* margin: auto; */
-            /* justify-content: space-between; */
-        }
-#btn_rev{
-    font-size: 24px;
-    margin-top: 50%;
-    padding: 5%;
-    background-color: #c83259;
-    border: navajowhite;
-    color: white;
-    border-radius: 5px;
-}
-#image{
-    margin-top: 8%;
-    
-}
-.pay{
-    height: 15%;
-    width: 90%;
-    color: white;
-    font-size: 20px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    background-color: #c83259;
-    border: #c83259;
-    border-radius: 5px;
-}
-#main_modal{
-    display: flex;
-    gap: 5%;
-    padding: 10%;
-    /* */
-}
-.inner_main{
-    border: 1px solid black;
-    height: 225px;
-    padding: 1%;
-}
-#main_modal{
-    width: 1000px;
-}
-#price{
-    margin-top: 7%;
-}
+     
 /* modal  */
 
     </style>
 </head>
+<div id="navbar" style="height: 100px;">
+
+</div>
 <body>
- 
+ <div id="uppermain">
     <div id="main_info">
  
 <div>
@@ -150,15 +61,15 @@
         </div>
     </div>
     <!-- <button "></button> -->
-    <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-top: 25%; font-size: 22px; background-color: #c83259; color: white; border: none; padding: 4%;">
-        Reserve a room
-      </button>
+    
 </div>
 <div>
     <div id="image"></div>
     <h3>location Mumbai</h3>
     <h2>Explore the area</h2>
+  
     <div class="drive">
+        
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAgVBMVEX29vYAAAD+/v76+vr////19fXt7e3y8vLq6ure3t7S0tLV1dXk5OQnJyfAwMCioqKsrKzJycmysrJOTk59fX1vb2+KioqdnZ2RkZFHR0dWVlbBwcFcXFwxMTGDg4M9PT0QEBAXFxc1NTUeHh5aWlp2dnZlZWVCQkIjIyNxcXETExMkLPFeAAALHElEQVR4nO2d2WLiOgxAQQokIUBZC4WydYFO//8DL0tpgdixZMuJ28t5nQ6xYseStblWu3Pnzp07d+7c+V+BcAKx6pF4A7Ll82y2HU26aYMt6PH9BP9uYFn/5nM27TYZY0bIJuPnUTfwFQDj+g2rx3kzosiJ0F2d/stLGrKQ8HAr4pHZQ4omMSEd/vyHgIXERCnigcWyXyQmwvTyrz/iEkfNAx61Mh74140jtZhRtrr+00coeehkGoUiHth24/xsIk5zf9isYvwEcGCUcc/4Vsyo9ZL/q3mgX2R+U9WJOf8RExvKBd4LVEZUzIeGz1HrpDijVkf5B6HOIy7IMu55fUwjaIzU/7iubmNFLLJByGv1zG6insR6fVDJNO5NSYzbWZbo1RymTBm1TCtQHXu5sofx6XPbjOc6KaErI2IvKle8o4D95eZyDMNEJ2S60gybwTAtexYRkmluL3nVCYkai5VBj2DAY/HGwJQwam1VA3nSvmpoarZKGtumeRIBkn6v16+JTPf+uPOkGYv+ZIDQ5u6vP3Q1Bu3lzzcfToP6HLgLiVF3px1MVjAWjNJ/tkKOCo8n+zlsXyyTiaOQCH29hCabGSG1XrGdaQq6sUO8vPrblstHiZDNigYyNL3B/VZVfNAqYtdrqtYsRrdGv35bMAPJe/EouoS9D+LJ2lrM527jds1Ckn/t1hOJODGMYEf7aYgdNMn6bLZ/DSo3iQce7GTEaG60rcmvDxqm11VEZ5KevZfQVOowO6MP2sofu2LJsLUgzh/yGTz1kv1kos5KJHwzORAJq2vF+01InKyC+raLDY0uWjf4IkZZkb44w/UM7vWleW0Usd5o/oE/jVgjbfdz/jdgULa2PLBHEvV1J9Yr7IwLhMGntIhd7kgwpn01I1u1Cw2nzSfHmGC9X0sIc9prHrtYFoQtm8pHlxvfgibxqPDmdGrDqE933RUy5R4f998K8adnNceTKUk3mVn12rw4JSTPxJ9+Ezh8Q9NgClPFfDycwmjjwahH/dmtiH8Bo5aA0+fI+yChTCe0h+bfOvFPypWESH6tRsyhTfMJ4wdrpaFAasEeWSz7Nf2qhZRufchGBPcLlhU4MLHVrFpV2E/LRNqty1lCJIaTLCemMuynw4fnWtIkONFZzuPoZ9ViY2n+P9+wLUMS+1Phq7CUh1V7Vp1E+/uLli/nPMacN03laZIhQMzZ1jptj/EH2omVzWbU4/jLZrHXWKCQdefEyHtmFyTSew+TMkKB+73H3hHrzEtJoUBRu4fHo+tRisz+ZCmvRggsWmWGrFGX4uET9lHbFZ7OFmCVlZ9agTUfFoGWSTW5wFDeVJafWXEGayV9lZTMCm9E/Q//Ej77NE8JYMO7rhwYMyu8E829SkhJj/EPqgOqInyyHeyeoHu1ubzHIUziCWjrsp9c+JiXnm1YBKJ97ouOUSOMZfpD1N+ISliu/U0Em9RADIXHMMu4EMR8sC8V2N9Eor6MiNNAFIYSaIsEuXQ5xWGANYmPMtwatRPgfqpcBD2NBwzleARmwW4430SuJ5H38GXkVHIpcU3KLgNXPVlNaRMP1wQCp7zzkojsqymOtMOXEVtuItZ/gYjNjZuIr8FvOZi4poAYKzWqBjLnwJ1Y9pQnJDw7VZSM0kGUCIGEWqR+ROhk1Q9YRmVpjgXhtjjB2FHzfxNqY4yaXPS8E+g0SrpXXSoIPQKZYOqnSy2DN1hZp2ZCbMYj0mXggvDUo/Ak1gPs4QLyiZBFNfAVID+J9dDUI2RCtUpXhDSNNw3YpNgFtK36mcR6fRuMjOK1EN8Eox4ZNVFcTj0EELCZa6tQJv7yOOqnwmyEbLQ38Z+ri7Ri7DOjvIU1SM7HNIF+NFZEfa5X6nXHMNkThAs3eyU+AbbGeJm0EYDsVl5Depnq06lAREh4m83wq4kQ+Qt+udmvbdpfuMHM/9v1v1MWwTKdt2xVwlyn68HF5m8br5OsVaWI2GSt0+t8PmzbyVhuvBVY+2kuFQwKu1FpcTlpIbexXcQqJpvm6mnsitEc0h8Qkv6g2yLVsp/+A3ISGVRZ/HYtNK3DrdAYfH1Zi9Fc0fFYIWLC8dmos/jBIrve1s7Z2xFX7t7toGFKSmcF3LaJemAWyUlTy/TOqJ83rLb51mlX/4Vhgnf6uheG7FaoltXxugKi9bKl/TY5WnGqzx1ma4+BnYhFDu3VQ6Js94f0WE1xxRAvNenV8mBlshq3hzYTNwOL6Yp/ULx9AadwaWxZV01oDvzxmF6tWWyTj0XvpmITWtP3I2vrFgf6OxAu2V2sWcioo9plxq+HriEdKgJiqu3/PDhpTSDnTtMK22hNuBYuTRw4psa4G0cRdbcf0Wqi4I3yY44VufR5ObAlxk2HGdEipCihmXMxp1RL8gs2ht30AoIVMBaoAwTpQr4po181wQoQyT+ie48ojDW2qe7hRrNX5kgMqVj7gqcW05NtPicLBZE5lksRC375pblkQMoNhyhQDb5+sNjizZaOnM8YnDvGTa0KTM0KWjCVHDKnj3JpWwfdMG06krlyGNvXRb23rYNmkamkV7SazPpai/e2g5oGk+dLUMLj8zIL9/zIfg6PzzS9WOnoBsbc+x4eXebw+EiDwfwpH8FhZdVuJiQ3ZSEF1/gdWXjw/NPj+rsBipiShqf4qCUnbj0z6vHJhMGa81T5SEpbFIvLGxzJvnJXKUlvYuaHoaTOX7TR3EFWrJLNsLF6jBob08HFCr0Nx+Tz8RHJTbAZFBsEH3LPa2yKZDwdHzFKe9Me7/hNoXAqBXMRo0JlNThdMnnafPn3RJifrvcovck9rTggMMfLqJOHXIBY+2jBLb04ZN7Cq5tC5QuTQasol4IyFm6s7esvZiU+kfplJFiRWOwKmN+E78TT5fTeFsmvX/9FKBBcQCf0r1iyrIQVaX0WX6yxztsimZgHnORX+eRy0Okuyc+C1ZZFvjRZ+3jJPZzV6EK+44M2riRZHsTpAuHDRG9qniXq9aSnsMx85OdGGs+y6JJBqohDL30Cddd7i5Z5AVF5eGqZr3PuiPYJoykP++wVA7r9wOJOQz0k5THyd7WD2tB6FX0eQXl47WepPsG+yF5AZEwuyScxS6LOLnkSfasm5fFkzthye77SChC2GotPHg++q+XU8QjhnnZQ4OksoxW50hcgbFLpU8o25kveJZ6v8tULdyXQ+xu83eh0hdIXIFzXpS9LKqdzjnLTE360Pm2upN6yqvo24a4E+tOVqD2lR/GxSDft0QeTS6p1VCwkcceR7nRVVv9cxQcp7pLXna5KaxCIOQ0p7lQBTf6TvKdRN4Dbo4+4H1erIEvrEXx7LFjJP0KnIEtsgnj13I4HnaULOpRXl3vli/AhovYEWV4f5Mu3PPTickBN9U+Jnax+vKxLP64xnRFQYq/n6LxYu74O5JrgUYm9nvFUA7L1d1+PpulDmd26DiHCp75HnwMo05E3ZbbmwHSQevWqqN3IL6VeoMPrjsBHnRlYmilXCmpDp+T2I55Ru8p/w3UPdNTejt9w3QMdtTEXcj9rPmpjLtx+1jaoM4HCatjpitLDWUULMo8ojfLgr3tgokog+Q23IXFQhef+lnpUyxhcr2dHVAfIv6U61PWsVY9JnE1ORNnEihDIJ62FfosOG8w7OzxUc1SLIuH6N1zAxgLzDp3Q7+5kk0/tCPRmEgfySaTBtCUXI5/7+LcOyAdyibLrqkckT87Z8bd8ckdyB8g/pzlquYjHL7gtmM+Nh/UX3E5qweXOOvtrx6ozkE5nq0Vn9TzNykjorAaEL/6shHfu/K/5D9s/kuVfUVaQAAAAAElFTkSuQmCC" alt="">
         <p>Mumbai (BOM-Chhatrapati Shivaji Intl.)</p>
         <p class="drive_p">18 min walk</p>
@@ -181,12 +92,16 @@
             23 min drive</p>
     </div>
 </div>
-    </div>
 
+    </div>
+    <button type="button" id="room_btn"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style=" font-size: 20px; background-color: #c83259; color: white; border: none; padding: 1%;">
+        Reserve a room
+      </button>
+      </div><br><br><br><br><br>
 <!-- MODAL -->
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-    <div class="modal-dialog" role="document" style="width: 65%;">
+    <div class="modal-dialog" role="document" style="width: 70%;">
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title" id="exampleModalLabel">Your payment option</h3>
@@ -227,7 +142,7 @@
         </div>
     
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: black; color: white;">Close</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
@@ -235,26 +150,10 @@
   </div>
 </body>
 </html>
-<script>
-    const btn=document.getElementById('btn_rev')
-const data=JSON.parse(localStorage.getItem("element"))
-const title=document.getElementById('title')
-const ratings=document.getElementById('ratings')
-const img=document.getElementById('image')
-const price=document.getElementById('price')
-const price1=document.getElementById('price1')
-let image = document.createElement("img");
-image.setAttribute("src", data.image);
-price.innerText="$"+data.price
-price1.innerText="$"+data.price
-title.innerText=data.name
-img.append(image)
-image.setAttribute("src",data.image)
-ratings.innerText="Ratings "+data.ratings+"/10"
-function property(){
-   window.location.href="./checkout_book.html"
-}
-function pay(){
-   window.location.href="./checkout_book1.html"
-}
+<script src="./scripts/hotelinfo.js">
+   
 </script> 
+<script type="module">
+    import navbar from "./components/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+  </script>

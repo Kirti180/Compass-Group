@@ -1,0 +1,127 @@
+#search {
+    width: 80%;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5%;
+   
+  }
+  .container {
+    display: grid;
+  }
+  /* checkbox */
+
+  /* The container */
+
+  #hotel_main {
+   width: 80%;
+   margin: auto;
+    /* overflow: scroll; */
+   justify-content: space-between;
+    display: flex;
+    margin-top: 5%;
+    /* grid-template-columns: 250px 900px; */
+  }
+  body {
+    background-color: rgb(243, 240, 240);
+   
+  }
+  #conatin {
+    /* margin-left: 2%; */
+    display: grid;
+    height: 100vh;
+    overflow: scroll;
+    /* grid-template-columns: repeat(1,1fr); */
+    /* height: 60%; */
+    gap:30px ;
+    
+    margin: 0px;
+    width: 70%;
+    /* border: 1px solid red; */
+  
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+  img {
+    width: 250px;
+    height: 100%;
+  }
+
+  #card2 {
+    /* border: 1px solid black; */
+    background-color: white;
+    height: 150px;
+    display: flex;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  input[type=checkbox]{
+accent-color:#c83259;
+  }
+  input[type=radio]{
+accent-color:#c83259;
+  }
+  .check{
+    display: grid;
+
+  }
+  #card{
+    /* border: 1px solid red; */
+    display: flex;
+    line-height: 5px;
+    /* gap: 250px; */
+    width: 100%;
+   
+  }
+  #location{
+    padding-bottom: 10%;
+  }
+  
+  #pricediv{
+    padding-top: 12%;
+    width: 40%;
+    text-align: right;
+    margin-right: 5%;
+    /* border: 1px solid black; */
+  }
+  #other{
+    font-weight: bold;
+    width: 100%;
+    /* border: 1px solid black; */
+  }
+  #mumbai{
+    height: 12%;
+  }
+  #scroll{
+    height: 100vh;overflow: scroll; 
+    width: 20%;
+  }
+  ::-webkit-scrollbar {
+width: 10px;
+}
+
+/* small */
+@media screen and (min-width: 300px) and (max-width:650px){
+    #scroll{
+        display: none;
+       }
+       #conatin{
+        width: 100%;
+       }
+       img {
+        width: 100px;
+        height: 100%;
+      }
+}
+/* medium */
+@media screen and (min-width: 651px) and (max-width:950px){
+   #scroll{
+    display: none;
+   }
+   #conatin{
+    width: 100%;
+   }
+   img {
+    width: 160px;
+    height: 100%;
+  }
+}

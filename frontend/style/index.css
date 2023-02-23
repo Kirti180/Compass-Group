@@ -1,33 +1,12 @@
-#nav {
-  display: flex;
-  width: 100%;
-  /* height: %; */
-  justify-content: space-around;
-  background-color: #06202e;
-  color: white;
-  /* padding-top: 1%;
-   padding-bottom: 1%; */
-}
-#other-comp {
-  margin-top: 1%;
-  display: flex;
-  width: 50%;
-  justify-content: space-around;
-  /* border: 1px solid red; */
-}
 
-#name {
-  width: 50%;
-  /* border: 1px solid red; */
-}
+
+
 #compass {
   margin-left: 7%;
   font-family: "Alex Brush";
 }
 
-.other {
-  font-size: 18px;
-}
+
 #compass {
   font-size: 20px;
 }
@@ -229,13 +208,43 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-#footer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-right: 4%;
-  margin-left: 4%;
+
+
+
+#tip1{
+  position: relative;
+  height: 82%;
+  margin: 1%;
+text-align: center;
+color: white;
 }
-.decoretor {
-  text-decoration: none;
-  color: white;
+.four5{
+
+  /* border: 1px solid black; */
+  position: relative;
+  height: 82%;
+  margin: 1%;
+text-align: center;
+color: white;
+}
+.four1{
+  position: relative;
+  height: 82%;
+  margin: 1%;
+text-align: center;
+color: white;
+}
+.four1 img{
+  width: 100%;
+  height: 100%;
+}
+.bottom-left {
+position: absolute;
+bottom: 8px;
+text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+               1px -1px 0 #000,
+              -1px -1px 0 #000;
+text-align: left;
+left: 16px;
 }

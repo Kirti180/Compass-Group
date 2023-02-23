@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Side</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    #graph{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    img{
+        width: 100%;
+    }
+ #items li a:hover{
+    background-color: #06202e;
+    color: white;
+  }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+        <h1>Admin pannel</h1>
+       
+        <div class="input-group" style="margin-bottom: 5%; margin-top: 10%;">
+            <input type="text" class="form-control" placeholder="Search Blog..">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+      <ul class="nav nav-pills nav-stacked" id="items">
+        <li><a href="./adminhotel.html">Stays</a></li>
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Cars</a></li>
+        <li><a href="#">Packages</a></li>
+        <li><a href="#">Things to do</a></li>
+        <li><a href="#">Cruises</a></li>
+      </ul><br>
+      
+    </div>
+
+    <div class="col-sm-9">
+         <p id="compass" style="font-size: 50px; font-weight: 800;font-family: Alex Brush;padding-top: 2%;">Compass    Group</p>
+      <hr>
+      <h3 style="font-weight: bold;">Get the yearly information in graph</h3><br><br>
+      <div id="graph">
+        <div>
+            <img src="./images/car.png" alt="">
+            <!-- <h4 class="names">Stays and Hotel booking-2022</h4> -->
+        </div>
+        <div>
+            <img src="./images/flight.png" alt="">
+            <!-- <h4 class="names">Flights bookin</h4> -->
+        </div>
+        <div>
+            <img src="./images/cursies.png" alt="">
+            <!-- <h4 class="names">Car booking</h4> -->
+        </div>
+        <div>
+            <img src="./images/package.png" alt="">
+            <!-- <h4 class="names">Package booking</h4> -->
+        </div>
+        <div>
+            <img src="./images/thingd to do.png" alt="">
+            <!-- <h4 class="names">Exploring things to do</h4> -->
+        </div>
+        <div>
+            <img src="./images/hotelbookin.png" alt="">
+            <!-- <h4 class="names">Cruises booking</h4> -->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- <footer class="container-fluid">
+  <p>Footer Text</p>
+</footer> -->
+
+</body>
+</html>

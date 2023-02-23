@@ -147,25 +147,25 @@ hotelRouter.post('/create', async (req, res) => {
 })
 
 
-// postRouter.patch('/update/:id',auth,async(req,res)=>{
-//     const payload=req.body
-//     const Id= req.params.id
-//     try{
-//         const comment= await postModel.findByIdAndUpdate({_id:Id},payload)
-//         res.send({msg:"patch req"})
-//     }catch(err){
-//         console.log(err)
-//     }
+hotelRouter.patch('/update/:id',async(req,res)=>{
+    const payload=req.body
+    const Id= req.params.id
+    try{
+        const comment= await hotelModel.findByIdAndUpdate({_id:Id},payload)
+        res.send({msg:"patch req"})
+    }catch(err){
+        console.log(err)
+    }
 
-// })
-// postRouter.delete('/delete/:id',auth,async(req,res)=>{
-//     // const payload=req.body
-//     const Id= req.params.id
-//     try{
-//         const comment= await postModel.findByIdAndDelete({_id:Id})
-//         res.send({msg:"delete req"})
-//     }catch(err){
-//         console.log(err)
-//     }
-// })
+})
+hotelRouter.delete('/delete/:id',async(req,res)=>{
+    // const payload=req.body
+    const Id= req.params.id
+    try{
+        const comment= await hotelModel.findByIdAndDelete({_id:Id})
+        res.send({msg:"delete req"})
+    }catch(err){
+        console.log(err)
+    }
+})
 module.exports = { hotelRouter }

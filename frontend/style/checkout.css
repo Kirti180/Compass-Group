@@ -23,6 +23,7 @@
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 70%;
     z-index: 1;
   }
   
@@ -41,7 +42,7 @@
   #checkout{
     border-radius: 2%;
     box-shadow: #cecdcd 0px 5px 15px;
-    width: 40%;
+    width: 48%;
     padding-top: 2%;
     padding-bottom: 5%;
     text-align: left;
@@ -210,18 +211,18 @@ padding-top: 1%;
  }
 #order{
   
-  font-size: 20px;
+  font-size: 14px;
 }
 #innn{
   width: 80%;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 3%;
   border-radius: 5px;
   padding: 1%;
 }
 .out{
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 3%;
   width: 38.5%;
   padding: 1%;

@@ -4,109 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+<link rel="stylesheet" href="./style/footer.css">
+<link rel="stylesheet" href="./style/navbar.css">
+<link rel="stylesheet" href="./style/hotel.css">
     <title>Document</title>
     <style>
-      #search {
-        width: 80%;
-        height: 35px;
-        font-size: 16px;
-        border-radius: 5%;
-       
-      }
-      .container {
-        display: grid;
-      }
-      /* checkbox */
-
-      /* The container */
-
-      #hotel_main {
-       width: 80%;
-       margin: auto;
-        /* overflow: scroll; */
-       justify-content: space-between;
-        display: flex;
-        /* grid-template-columns: 250px 900px; */
-      }
-      body {
-        background-color: rgb(243, 240, 240);
-      }
-      #conatin {
-        /* margin-left: 2%; */
-        display: grid;
-        height: 100vh;
-        overflow: scroll;
-        /* grid-template-columns: repeat(1,1fr); */
-        /* height: 60%; */
-        gap:30px ;
-        
-        margin: 0px;
-        width: 70%;
-      
-        /* grid-template-columns: repeat(2, 1fr); */
-      }
-      img {
-        width: 250px;
-        height: 100%;
-      }
-
-      #card2 {
-        /* border: 1px solid black; */
-        background-color: white;
-        height: 150px;
-        display: flex;
-        gap: 10px;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      }
-    
-      input[type=checkbox]{
-accent-color:#c83259;
-      }
-      input[type=radio]{
-accent-color:#c83259;
-      }
-      .check{
-        display: grid;
-
-      }
-      #card{
-        /* border: 1px solid red; */
-        display: flex;
-        line-height: 5px;
-        /* gap: 250px; */
-        width: 100%;
-       
-      }
-      #location{
-        padding-bottom: 10%;
-      }
-      
-      #pricediv{
-        padding-top: 12%;
-        width: 40%;
-        text-align: right;
-        margin-right: 5%;
-        /* border: 1px solid black; */
-      }
-      #other{
-        font-weight: bold;
-        width: 100%;
-        /* border: 1px solid black; */
-      }
-      #mumbai{
-        height: 12%;
-      }
-      #scroll{
-        height: 100vh;overflow: scroll; 
-        width: 20%;
-      }
-      ::-webkit-scrollbar {
-  width: 10px;
-}
+ 
     </style>
   </head>
   <body>
+    <div id="navbar"></div>
     <div id="hotel_main">
       <div id="scroll" >
         
@@ -119,8 +27,8 @@ accent-color:#c83259;
         <select id="search" >
           <option value="all">
             Recommended</option>
-          <option value="low">price : low to high</option>
-          <option value="high">price : high to low</option>
+          <option id="low" value="low">price : low to high</option>
+          <option id="high" value="high">price : high to low</option>
         </select>
         <h2>Filter by</h2>
         <h3>Popular filters</h3>
@@ -150,7 +58,7 @@ accent-color:#c83259;
         <div  class="check">
           
          <div>
-            <input type="radio"  name="radio" />
+            <input type="radio"  name="radio" id="all1"/>
             Any
           </div>
           <div>
@@ -182,7 +90,7 @@ accent-color:#c83259;
         <div class="check">
         <label class="radio"
           >
-          <input type="radio" name="radio2" />
+          <input type="radio" name="radio2" id="all2" />
           Condominium resort
         </label>
         <label class="radio"
@@ -201,238 +109,40 @@ accent-color:#c83259;
         <div class="check">
         <label class="radio"
           >
-          <input type="radio" name="radio3" />
+          <input type="radio" name="radio3" id="gateway"/>
           Gateway of India
         </label>
         <label class="radio"
           >
-          <input type="radio" name="radio3" />
+          <input type="radio" name="radio3" id="juhu"/>
           Juhu Beach
         </label>
         <label class="radio"
           >
-          <input type="radio" name="radio3" />
+          <input type="radio" name="radio3" id="all3"/>
           U.S. Consulate General
         </label>
       </div>
         <h3>Meal plans avaliable</h3>
       
         <div class="check">
-         <div> <input type="checkbox"  id="breakfast" />
+         <div> <input type="checkbox"  id="breakfast1" />
           Breakfast Included
         </div>
-         <div>  <input type="checkbox" />
+         <div>  <input type="checkbox" id="lunch"/>
           Lunch Included</div>
-         <div>  <input type="checkbox" />
+         <div>  <input type="checkbox" id="dinner" />
           Dinner Included</div>
-         
-        
-        
-        
-        
-        
-        
       </div>
       </div>
     </div>
       <div id="conatin">
-        
       </div>
    
   </body>
-</html>
-<script>
-  let conatin = document.getElementById("conatin");
-  const getdata = () => {
-    fetch("http://localhost:8080/hotel/all")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  getdata();
 
-  const apart = () => {
-    fetch("http://localhost:8080/hotel/aphotel")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  apart();
-
-  const villa = () => {
-    fetch("http://localhost:8080/hotel/villa")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  villa();
-
-  const Breakfast = () => {
-    fetch("http://localhost:8080/hotel/breakfast")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  Breakfast();
-
-  const nine1 = () => {
-    fetch("http://localhost:8080/hotel/gt9")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  nine1();
-
-  const eight1 = () => {
-    fetch("http://localhost:8080/hotel/gt8")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  eight1();
-
-  const seven1 = () => {
-    fetch("http://localhost:8080/hotel/gt7")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  seven1();
-
-  const paylater = () => {
-    fetch("http://localhost:8080/hotel/refundable")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  paylater();
-
-  const refund = () => {
-    fetch("http://localhost:8080/hotel/reserve")
-      .then((res) => res.json())
-      .then((res) => {
-        //    console.log(res)
-        display(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-  refund();
-  function display(data) {
-    conatin.innerHTML = null;
-    data.forEach((element) => {
-      // console.log(element)
-      let card = document.createElement("div");
-      let card2 = document.createElement("div");
-      let card3 = document.createElement("div");
-      let other = document.createElement("div");
-      let pricediv = document.createElement("div");
-      card2.setAttribute("id", "card2");
-      card3.setAttribute("id", "card3");
-      card.setAttribute("id", "card");
-      other.setAttribute("id", "other");
-      pricediv.setAttribute("id", "pricediv");
-      let title = document.createElement("h2");
-      let image = document.createElement("img");
-      image.setAttribute("src", element.image);
-      let hotel_type = document.createElement("p");
-      let price = document.createElement("h2");
-      let rating = document.createElement("p");
-      let payment_type = document.createElement("p");
-      let meal = document.createElement("p");
-      let location = document.createElement("p");
-      location.setAttribute("id", "location");
-      card2.addEventListener("click",()=>{
-    localStorage.setItem("element",JSON.stringify(element))
-    window.location.href="./hotelinfo.html"
-  })
-      //         edit.innerText="edit"
-      //         edit.addEventListener("click", function () {
-
-      //   localStorage.setItem("ID",element._id)
-      //   window.location.href="./updateform.html"
-      // });
-      //         btn.innerText="Delete"
-      //         btn.addEventListener("click", function () {
-      //   handleDelete(element._id);
-      // });
-      title.innerText = element.name;
-      rating.innerText = element.ratings+"/10 Ratings";
-      payment_type.innerText = element.payment_type;
-      meal.innerText = element.meal+" included";
-      location.innerText = element.location;
-      hotel_type.innerText = element.hotel_type;
-      price.innerText = "$"+element.price;
-      pricediv.append(price,rating,meal)
-      other.append(title,
-        location,
-        
-        payment_type,
-       
-        
-        hotel_type)
-      card.append(
-        other ,pricediv
-       
-      );
-      card3.append(image)
-      card2.append(card3, card);
-      conatin.append(card2);
-
-    });
-  }
-  window.addEventListener("load", getdata);
-  // async function handleDelete(id) {
-  //   await fetch(`https://muddy-jade-bear.cyclic.app/notes/delete/${id}`, {
-  //     method: "DELETE",
-  //     headers: {
-  //       "Content-type": "application/json; charset=UTF-8",
-  //       Authorization: localStorage.getItem("token"),
-  //     },
-  //   });
-  //   window.location.reload();
-  // }
-  let checkmark = document.getElementById("all");
-  checkmark.addEventListener("click", getdata);
-  let apart1 = document.getElementById("apart");
-  apart1.addEventListener("click", apart);
-  let villa1 = document.getElementById("villa");
-  villa1.addEventListener("click", villa);
-  let breakf = document.getElementById("breakfast");
-  breakf.addEventListener("click", Breakfast);
-  let nine = document.getElementById("9+");
-  let eight = document.getElementById("8+");
-  let seven = document.getElementById("7+");
-  let paylater1 = document.getElementById("paylater");
-  let refund1 = document.getElementById("refund");
-  nine.addEventListener("click", nine1);
-  eight.addEventListener("click", eight1);
-  seven.addEventListener("click", seven1);
-  refund1.addEventListener("click", paylater);
-  paylater1.addEventListener("click", refund);
- 
-  let search = document.getElementById("search");
+ <script src="./scripts/hotel.js"></script>
+<script type="module">
+  import navbar from "./components/navbar.js";
+  document.getElementById("navbar").innerHTML = navbar();
 </script>
