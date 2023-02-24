@@ -10,6 +10,8 @@
     <script src="https://kit.fontawesome.com/714346974b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/navbar1.css">
     <link rel="stylesheet" href="./style//footer.css">
+    <link rel="stylesheet" href="./style/travelpopup.css">
+    
     <title>Compass</title>
     <style>
 nav{
@@ -67,7 +69,7 @@ nav{
        <input type="text" placeholder="Going to" class="input1"><i class='fas fa-map-marker-alt'></i></d>
        <input type="date"  placeholder="Check-in" class="input">
        <input type="date"  placeholder="Check-out" class="input">
-       <input type="text" placeholder="Travelers" class="input2">
+       <input type="text" placeholder="Travelers" class="input2" class="open-button" onclick="openForm()">
        <br>
        <button id="btn">Search</button>
     </div>
@@ -144,8 +146,8 @@ nav{
 <div class="four5" style="height: 46%;">
     <img id="sub_add1" src="https://forever.travel-assets.com/flex/flexmanager/images/2020/09/25/15ORB_GeoTargeted_Chicago_mrq_1320x742_20200525.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh" alt="">
     
-    <div class="bottom-left" style="height: 60%;"><h1>Explore local getways</h1>
-    <h3>Get oout and explre the stay close to home with a road trip.</h3></div>
+    <div class="bottom-left" style="height: 60%;" id="inner_sub_add1"><h1>Explore local getways</h1>
+    <h3 id="inner_sub_add1">Get oout and explre the stay close to home with a road trip.</h3></div>
 </div>
 <img id="sub_add2" src="https://tpc.googlesyndication.com/simgad/6378264940813121541?" alt="">   
 </div>
@@ -199,8 +201,8 @@ nav{
 </div>
 
 <div id="qr">
-<img src="https://a.travel-assets.com/mad-service/footer/marquee/ORB_App_Footer_v1.jpg" alt="" width="100%" height="100%">
-<div >
+<img id="qr_mob" src="https://a.travel-assets.com/mad-service/footer/marquee/ORB_App_Footer_v1.jpg" alt="" width="100%" height="100%">
+<div id="qr1">
     <h2 style="font-size: 30px;">Rewards are waiting for you in the Compass app</h2>
     <ul>
         <li>Earn 4% back when yot book your hotel in app, vs. 3% onsite</li>
@@ -209,7 +211,7 @@ nav{
     </ul><br>
     <h3 style="font-size:20px;">Scan the OR code with your device camera and download our aap</h3>
 </div>
-<img src="https://a.travel-assets.com/mad-service/qr-code/portfolio_app_landing/qr_app_landing_footer_orbitz.png" alt="" width="60%" height="60%" style="margin-top: 10%;">
+<img id="qr_img" src="https://a.travel-assets.com/mad-service/qr-code/portfolio_app_landing/qr_app_landing_footer_orbitz.png" alt="" width="50%" height="60%" style="margin-top: 10%;">
 </div>
 <h1 style="margin-top: 4%; text-align: left; margin-left: 4%;">More destinations</h1>
 
@@ -295,6 +297,7 @@ nav{
     © 2023 Orbitz, LLC, an Expedia Group Company. All rights reserved. <br>
     Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST# 2083930-50.</p>
 </div>
+
 </body>
 </html>
 
@@ -323,3 +326,14 @@ nav{
     document.getElementById("burger").style.display = "none";
   }
 </script>
+
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+  

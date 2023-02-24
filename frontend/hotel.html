@@ -6,15 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
 <link rel="stylesheet" href="./style/footer.css">
-<link rel="stylesheet" href="./style/navbar.css">
+<link rel="stylesheet" href="./style/footer.css">
 <link rel="stylesheet" href="./style/hotel.css">
-    <title>Document</title>
+<link rel="stylesheet" href="./style/navbar1.css">
+    <title>Hotel</title>
     <style>
- 
+      nav{
+    background-color:  #06202e;
+    color: white;
+    padding: 1%;
+    /* margin-bottom: 3%; */
+}
+#hotel_main{
+  margin-top: 2%;
+}
     </style>
   </head>
   <body>
-    <div id="navbar"></div>
+    <nav>
+      <i class="fa-solid fa-bars" id="hamburger"></i>
+      <div id="nav_right_side">
+          <div id="brand_name"><a href="./index.html" class="indexstyle1" style="color:white; font-size: 30px; font-weight: 800; font-family: Alex Brush;">Compass Group</a> </div>
+          <!-- <input type="text" placeholder="Search here" > -->
+      </div>
+      <div id="nav_left_side">
+  
+          <div style="text-decoration: none;"><span><a class="indexstyle" href="3l" style="color:white; text-decoration: none;">Espanol</a></span></div>
+  
+          <div style="text-decoration: none;"><span><a href="#" class="indexstyle" style="color:white; text-decoration: none;">List your property</a> </span></div>
+          <div style="text-decoration: none;"><span><a href="#" class="indexstyle" style="color:white; text-decoration: none;">Support</a> </span></div>
+          <div> <span><a href="#" class="indexstyle" style="color:white; text-decoration: none;">Trips</a> </span></div>
+          <div style="text-decoration: none;"><span><a href="./register.html" class="indexstyle" style="color:white; text-decoration: none;">Sign in</a> </span></div>
+          <!-- <div><i class="fa-solid fa-cart-shopping "></i><span><a href="./cartpage.html" class="indexstyle">Support</a> </span></div> -->
+      </div>
+  </nav>
+  
+  
+  <div id="burger" >
+      <div  class="burger_inside">Espanol/</div>
+      <div  class="burger_inside">List your property</div>
+      <div  class="burger_inside">Support</div>
+      <div  class="burger_inside">Trips</div>
+      <div   class="burger_inside"><a href="./register.html" > Sign in</a></div>
+  </div>
+  <!-- END NAV -->
     <div id="hotel_main">
       <div id="scroll" >
         
@@ -139,6 +174,7 @@
       <div id="conatin">
       </div>
    
+    
   </body>
 
  <script src="./scripts/hotel.js"></script>
