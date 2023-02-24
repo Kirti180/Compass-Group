@@ -14,8 +14,10 @@ img.append(image)
 image.setAttribute("src",data.image)
 ratings.innerText="Ratings "+data.ratings+"/10"
 function property(){
-   window.location.href="./checkout_book.html"
+   localStorage.setItem("price",data.price)
+   window.location.href="./check.html"
 }
 function pay(){
-   window.location.href="./checkout_book1.html"
+   localStorage.setItem("price",data.price)
+   window.location.href="./checkpay.html"
 }

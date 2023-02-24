@@ -173,7 +173,7 @@
 }
 #qr {
   /* border: 1px solid red; */
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
   margin-top: 4%;
   margin-left: 4%;
   margin-right: 4%;
@@ -247,4 +247,142 @@ text-shadow: -1px 1px 0 #000,
               -1px -1px 0 #000;
 text-align: left;
 left: 16px;
+}
+
+/* small */
+@media screen and (min-width: 300px) and (max-width:650px){
+  #four_cards {
+    display: grid;
+    margin-left: 4%;
+    margin-right: 4%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #three_cards {
+   display: none;
+  }
+  #add1 {
+    display: grid;
+    grid-template-columns: 300px 200px;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 3%;
+  }
+  #add2 {
+    margin-top: 4%;
+    display: grid;
+    margin-left: 4%;
+    margin-right: 4%;
+    gap: 2%;
+    grid-template-columns: 350px 100px;
+  
+    height: 260px;
+  }
+  #sub_add2{
+    height: 50%;
+  }
+  #inner_sub_add1{
+    font-size: 10px;
+  }
+  #icon {
+   
+    display: none
+    ;
+ 
+  }
+  #tips {
+    margin-left: 4%;
+    margin-right: 4%;
+  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2%;
+  }
+  #qr_img{
+    display: none;
+  }
+  #qr_mob{
+    width: 40%;
+  }
+  #qr_info{
+    width: 50%;
+    height: 20%;
+  }
+  #qr {
+  display: none;
+  }
+  #distination_main {
+    gap: 2%;
+    margin-right: 4%;
+    margin-left: 4%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+}
+/* medium */
+@media screen and (min-width: 651px) and (max-width:950px){
+  #four_cards {
+    display: grid;
+  
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #add1 {
+    display: grid;
+    grid-template-columns: 450px 320px;
+    margin-left: 4%;
+ 
+    margin-top: 3%;
+  }
+  #add2 {
+    margin-top: 4%;
+    display: grid;
+    margin-left: 4%;
+   
+    gap: 2%;
+    grid-template-columns: 500px 240px;
+  
+    height: 260px;
+  }
+  #sub_add2{
+    height: 60%;
+  }
+  #inner_sub_add1{
+    font-size: 14px;
+  }
+  #tips {
+    margin-left: 4%;
+
+  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2%;
+  }
+  #qr_img{
+    display: none;
+  }
+  #qr_mob{
+    width: 70%;
+  }
+  #qr_info{
+    width: 50%;
+    height: 20%;
+  }
+  #qr {
+  
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-top: 4%;
+    margin-left: 4%;
+ 
+    display: grid;
+    grid-template-columns: 400px 350px;
+  
+    background-color: white;
+    text-align: left;
+  }
+ 
 }
