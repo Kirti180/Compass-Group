@@ -58,15 +58,15 @@ nav{
             <div id="tag">
        <div id="tags">
 <p style="color: rgb(16, 112, 202); font-weight: bold;">Stays</p>
-<p><a href="./flights.html">Flights</a> </p>
-<p><a href="./cars.html">Cars</a> </p>
-<p><a href="./package.html">Packages</a> </p>
-<p><a href="./things.html">Things to do</a> </p>
-<p><a href="./curises.html">Cruises</a> </p>
+<p style="color: rgb(16, 112, 202); font-weight: bold;">Flights </p>
+<p style="color: rgb(16, 112, 202); font-weight: bold;">Cars </p>
+<p style="color: rgb(16, 112, 202); font-weight: bold;">Packages </p>
+<p style="color: rgb(16, 112, 202); font-weight: bold;">Things to do</p>
+<p style="color: rgb(16, 112, 202); font-weight: bold;">Cruises</p>
 
        </div>
        <hr style="margin-left: 3%;margin-right: 3%;">
-       <input type="text" placeholder="Going to" class="input1"><i class='fas fa-map-marker-alt'></i></d>
+       <input type="text" placeholder="Going to" class="input1"/>
        <input type="date"  placeholder="Check-in" class="input">
        <input type="date"  placeholder="Check-out" class="input">
        <input type="text" placeholder="Travelers" class="input2" class="open-button" onclick="openForm()">
@@ -306,6 +306,10 @@ nav{
     document.getElementById("navbar").innerHTML = navbar();
   </script>
   <script>
+    let searchbtn=document.getElementById("btn")
+    searchbtn.addEventListener("click",()=>{
+        window.location.href='./hotel.html'
+    })
   let ham = document.getElementById("hamburger");
   ham.addEventListener("click",function(){
     this.classList.toggle("is-active");

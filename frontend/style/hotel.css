@@ -1,9 +1,15 @@
 #search {
-    width: 80%;
+    width: 90%;
     height: 35px;
     font-size: 16px;
     border-radius: 5%;
    
+  }
+  #select{
+    width: 90%;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5%;
   }
   .container {
     display: grid;
@@ -98,6 +104,7 @@ accent-color:#c83259;
   ::-webkit-scrollbar {
 width: 10px;
 }
+
 
 /* small */
 @media screen and (min-width: 300px) and (max-width:650px){

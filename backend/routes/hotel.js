@@ -123,6 +123,7 @@ hotelRouter.get('/high', async (req, res) => {
 hotelRouter.get("/search", async (req, res) => {
 
     const { name } = req.query
+    console.log(req.query)
     try {
 
         const hotel = await hotelModel.find({ name: { $regex: `${name}`, $options: "i" } })

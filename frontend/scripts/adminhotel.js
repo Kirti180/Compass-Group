@@ -56,7 +56,7 @@ function display(data) {
         location.setAttribute("id", "location");
         card2.addEventListener("click", () => {
             localStorage.setItem("element", JSON.stringify(element))
-            window.location.href = "./hotelinfo.html"
+            // window.location.href = "./hotelinfo.html"
         })
 
         title.innerText = element.name;

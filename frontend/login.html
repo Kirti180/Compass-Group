@@ -95,8 +95,15 @@
    }).then(res=>res.json())
    .then(res=>{
     console.log(res)
-    localStorage.setItem("token",res.token)
-    window.location.href="./index.html"
+
+    localStorage.setItem("token",JSON.stringify(res.token) )
+    if(res.token){
+      window.location.href="./index.html"
+      
+    }else{
+      alert("login falied")
+    }
+   
 })
    .catch(err=>console.log(err))
 }
