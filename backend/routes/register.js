@@ -37,12 +37,12 @@ userRoute.post('/login', async (req, res) => {
                     let token = jwt.sign({ userID: user[0]._id }, "kirti")
                     res.send({ "msg": "login done", "token": token })
                 } else {
-                    res.send({ data: 'wrong' })
+                    res.send({ msg: 'wrong' })
                 }
             })
 
         } else {
-            res.send({ data: 'wrong credentials' })
+            res.send({ msg: 'wrong credentials' })
         }
     } catch (err) { console.log(err) }
 

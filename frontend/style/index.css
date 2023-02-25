@@ -36,7 +36,11 @@
 .input2 {
   margin-left: 1%;
   margin-right: 1%;
-  height: 40px;
+  height: 30px;
+  font-size: 18px;
+  
+  border-radius: 5px;
+
 }
 
 .input1,
@@ -51,6 +55,7 @@
   margin-top: 6%;
   margin-bottom: 3%;
   font-size: 14px;
+  border-radius: 5px;
   background-color: #c83259;
   color: white;
   border: 1px solid #c83259;

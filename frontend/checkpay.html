@@ -29,7 +29,7 @@
     background-color: rgb(224, 223, 223);
   }
   #complete{
-    font-size: 22px;
+    font-size: 18px;
     background-color:#df3864 ;
     border: 1px solid #df3864;
     border-radius: 5px;
@@ -329,6 +329,11 @@
     price3.value="$ "+JSON.parse(localStorage.getItem("price"))
     let btn=document.getElementById("complete")
     btn.addEventListener("click",()=>{
+      let token=JSON.parse(localStorage.getItem("token"))
+      if(token){
         window.location.href='./last_book.html'
+      }else{
+        window.location.href='./register.html'
+      }
     })
 </script>

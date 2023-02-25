@@ -1,12 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>update</title>
+  <title>Update</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+  <style>
+    #admin_create{
+            background-color: #06202e;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3%;
+        }
+        #create{
+            /* background-color: rgb(85, 218, 92); */
+            border: none;
+            margin-right: 2%;
+            border-radius: 5px;
+            padding: 1%;
+            font-weight: bold;
+            color: white;
+       
+        
+        }
+        .container{
+            width: 34%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-bottom: 10%;
+            /* border: 1px solid red; */
+        }
+        #create_sub{
+            width: 100%;
+            background-color: #c83259;
+            color: white;
+            margin-bottom: 5%;
+        }
+  </style>
 </head>
 <body>
-    <h1>hotelbookina</h1>
+    <div id="admin_create">
+        <p id="compass" style="font-size: 30px; font-weight: 800;font-family: Alex Brush; color: white;margin-left: 2%; margin-top: 2%;">Compass    Group</p>
+        <h3 id="create">Create New +</h3>
+    </div>
+<div class="container">
+  <h2 style="margin-bottom: 5%;">Create New Product</h2>
+  <form>
+    <div class="form-group">
+      
+      <input type="text" class="form-control" id="name" placeholder="Name of product" >
+    </div>
+    <div class="form-group">
+      
+      <input type="text" class="form-control" id="price" placeholder="price of product" >
+    </div>
+    <div class="form-group">
+      
+        <input type="text" class="form-control" id="image" placeholder="Image of product" >
+      </div>
+      <div class="form-group">
+      
+        <input type="text" class="form-control" id="hotel_type" placeholder="Hotel-type of product" >
+      </div>
+      <div class="form-group">
+      
+        <input type="text" class="form-control" id="pay_type" placeholder="Payment-type of product" >
+      </div>
+      <div class="form-group">
+      
+        <input type="text" class="form-control" id="meal" placeholder="Meal Avaliable" >
+      </div>
+      <div class="form-group">
+      
+        <input type="text" class="form-control" id="location" placeholder="Location of product" >
+      </div>  <br>
+    <center>
+    <button type="submit" class="btn btn-default" id="create_sub"   >Submit</button>
+</center>
+  </form>
+</div>
+
 </body>
 </html>
+<script>
+    let create=document.getElementById("create")
+    let compass=document.getElementById("compass")
+    compass.addEventListener("click",()=>{
+        window.location.href='./admin.html'
+    })
+    create.addEventListener("click",()=>{
+        window.location.href='./createnew.html'
+    })
+</script>
+<script>
+    let id=localStorage.getItem("ID")
+      const getdata=()=>{
+        fetch(`http://localhost:8080/hotel/all?_id=${id}`,{
+    headers:{
+// "Authorization":localStorage.getItem("token")
+    },
+   }).then(res=>res.json())
+   .then(res=>{
+       console.log(res) 
+//    display(res.data)
+   document.getElementById("name").value=res.data[0].name
+    document.getElementById("price").value=res.data[0].price
+    document.getElementById("image").value=res.data[0].image
+    document.getElementById("hotel_type").value=res.data[0].hotel_type
+    document.getElementById("pay_type").value=res.data[0].pay_type
+    document.getElementById("meal").value=res.data[0].meal
+    document.getElementById("location").value=res.data[0].location
+
+
+})
+   .catch(err=>console.log(err))
+    }
+    getdata()
+let btn=document.getElementById("create_sub")
+
+    const onadd=async()=>{
+    // e.preventDefault()
+    const payload={
+ 
+     name:document.getElementById("name").value,
+    price:document.getElementById("price").value,
+    image:document.getElementById("image").value,
+    hotel_type:document.getElementById("hotel_type").value,
+    payment_type:document.getElementById("pay_type").value,
+    meal:document.getElementById("meal").value,
+    location:document.getElementById("location").value
+  
+    }
+    console.log(payload)
+    await fetch(`http://localhost:8080/hotel/update/${id}`,{
+    method:"PATCH",
+    headers:{
+"content-type":"application/json",
+// "Authorization":localStorage.getItem("token")
+    },
+    body:JSON.stringify(payload)
+   }).then(res=>res.json())
+   .then(res=>{
+    console.log(res)
+    localStorage.setItem("token",res.token)
+    alert("form updated successfully")
+})
+   .catch(err=>console.log(err))
+}
+
+
+
+btn.addEventListener("click",onadd)
+
+</script>
