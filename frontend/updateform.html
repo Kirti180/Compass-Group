@@ -99,7 +99,7 @@
 <script>
     let id=localStorage.getItem("ID")
       const getdata=()=>{
-        fetch(`http://localhost:8080/hotel/all?_id=${id}`,{
+        fetch(`https://puce-bewildered-parrot.cyclic.app/hotel/all?_id=${id}`,{
     headers:{
 // "Authorization":localStorage.getItem("token")
     },
@@ -122,8 +122,8 @@
     getdata()
 let btn=document.getElementById("create_sub")
 
-    const onadd=async()=>{
-    // e.preventDefault()
+    const onadd=async(e)=>{
+    e.preventDefault()
     const payload={
  
      name:document.getElementById("name").value,
@@ -136,7 +136,7 @@ let btn=document.getElementById("create_sub")
   
     }
     console.log(payload)
-    await fetch(`http://localhost:8080/hotel/update/${id}`,{
+    await fetch(`https://puce-bewildered-parrot.cyclic.app/hotel/update/${id}`,{
     method:"PATCH",
     headers:{
 "content-type":"application/json",
@@ -146,7 +146,7 @@ let btn=document.getElementById("create_sub")
    }).then(res=>res.json())
    .then(res=>{
     console.log(res)
-    localStorage.setItem("token",res.token)
+    // localStorage.setItem("token",res.token)
     alert("form updated successfully")
 })
    .catch(err=>console.log(err))

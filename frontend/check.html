@@ -324,6 +324,7 @@
     price1.innerText="$ "+JSON.parse(localStorage.getItem("price"))
     let btn=document.getElementById("complete")
     btn.addEventListener("click",()=>{
+      let token=JSON.parse(localStorage.getItem("token"))
       if(token){
         window.location.href='./last_book.html'
       }else{
