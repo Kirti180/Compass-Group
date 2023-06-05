@@ -1,6 +1,6 @@
 let conatin = document.getElementById("conatin");
 const getdata = () => {
-    fetch("https://puce-bewildered-parrot.cyclic.app/hotel/all")
+    fetch("https://funny-newt-hat.cyclic.app/hotel/all")
         .then((res) => res.json())
         .then((res) => {
             //    console.log(res)
@@ -86,7 +86,7 @@ function display(data) {
     });
 }
 async function handleDelete(id) {
-    await fetch(`https://puce-bewildered-parrot.cyclic.app/hotel/delete/${id}`, {
+    await fetch(`https://funny-newt-hat.cyclic.app/hotel/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json; charset=UTF-8",

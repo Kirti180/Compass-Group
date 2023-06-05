@@ -21,7 +21,7 @@ let checkmark2 = document.getElementById("all2");
 let checkmark3 = document.getElementById("all3");
 let select1 = document.getElementById("select");
 const getdata = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/all")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/all")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -32,7 +32,7 @@ const getdata = () => {
 getdata();
 
 const apart = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/aphotel")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/aphotel")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -42,7 +42,7 @@ const apart = () => {
 };
 
 const villa = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/villa")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/villa")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -52,7 +52,7 @@ const villa = () => {
 };
 
 const Breakfast = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/breakfast")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/breakfast")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -62,7 +62,7 @@ const Breakfast = () => {
 };
 
 const lunch1 = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/lunch")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/lunch")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -72,7 +72,7 @@ const lunch1 = () => {
 };
 
 const dinn = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/dinner")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/dinner")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -82,7 +82,7 @@ const dinn = () => {
 };
 
 const nine1 = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/gt9")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/gt9")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -92,7 +92,7 @@ const nine1 = () => {
 };
 
 const juhu1 = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/beach")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/beach")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -102,7 +102,7 @@ const juhu1 = () => {
 };
 
 const way = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/gate")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/gate")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -112,7 +112,7 @@ const way = () => {
 };
 
 const eight1 = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/gt8")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/gt8")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -122,7 +122,7 @@ const eight1 = () => {
 };
 
 const seven1 = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/gt7")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/gt7")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -132,7 +132,7 @@ const seven1 = () => {
 };
 
 const paylater = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/refundable")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/refundable")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -142,7 +142,7 @@ const paylater = () => {
 };
 
 const low = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/low")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/low")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -164,7 +164,7 @@ const select = (e) => {
 };
 const search1 = (e) => {
   setTimeout(() => {
-    fetch(`https://puce-bewildered-parrot.cyclic.app/hotel/search?name=${e.target.value}`)
+    fetch(`https://funny-newt-hat.cyclic.app/hotel/search?name=${e.target.value}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -174,7 +174,7 @@ const search1 = (e) => {
   }, 300);
 };
 const high = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/high")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/high")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
@@ -185,7 +185,7 @@ const high = () => {
 };
 
 const refund = () => {
-  fetch("https://puce-bewildered-parrot.cyclic.app/hotel/reserve")
+  fetch("https://funny-newt-hat.cyclic.app/hotel/reserve")
     .then((res) => res.json())
     .then((res) => {
       //    console.log(res)
