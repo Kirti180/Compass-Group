@@ -99,7 +99,7 @@
 <script>
     let id=localStorage.getItem("ID")
       const getdata=()=>{
-        fetch(`https://funny-newt-hat.cyclic.app/hotel/all?_id=${id}`,{
+        fetch(`https://bronze-katydid-gown.cyclic.app/hotel/all?_id=${id}`,{
     headers:{
 // "Authorization":localStorage.getItem("token")
     },
@@ -136,7 +136,7 @@ let btn=document.getElementById("create_sub")
   
     }
     console.log(payload)
-    await fetch(`https://funny-newt-hat.cyclic.app/hotel/update/${id}`,{
+    await fetch(`https://bronze-katydid-gown.cyclic.app/hotel/update/${id}`,{
     method:"PATCH",
     headers:{
 "content-type":"application/json",
